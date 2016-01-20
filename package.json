@@ -1,0 +1,23 @@
+{
+  "name": "rollup-plugin-msx",
+  "version": "1.0.0",
+  "description": "Mithril MSX transform plugin for Rollup.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/judas-christ/rollup-plugin-msx.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/judas-christ/rollup-plugin-msx/issues"
+  },
+  "homepage": "https://github.com/judas-christ/rollup-plugin-msx#readme",
+  "dependencies": {
+    "msx": "^0.4.1",
+    "rollup-pluginutils": "^1.3.1"
+  }
+}
