@@ -2,14 +2,19 @@
   "name": "rollup-plugin-msx",
   "version": "0.1.0",
   "description": "Mithril MSX transform plugin for Rollup.js",
-  "main": "index.js",
+  "jsnext:main": "dist/rollup-plugin-msx.es6.js",
+  "main": "dist/rollup-plugin-msx.cjs.js",
   "scripts": {
-    "test": "mocha"
+    "build": "rollup -c -f cjs -o dist/rollup-plugin-msx.cjs.js && rollup -c -f es6 -o dist/rollup-plugin-msx.es6.js",
+    "pretest": "npm run build",
+    "test": "mocha",
+    "prepublish": "npm run test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/judas-christ/rollup-plugin-msx.git"
   },
+  "files": ["dist/"],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -23,6 +28,7 @@
   },
   "devDependencies": {
     "chai": "^3.4.1",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "rollup": "^0.25.0"
   }
 }

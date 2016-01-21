@@ -1,12 +1,12 @@
-var pluginsutils = require('rollup-pluginutils');
-var msx = require('msx');
-var assign = require('object-assign');
+import { createFilter } from 'rollup-pluginutils';
+import msx from 'msx';
+import assign from 'object-assign';
 
-module.exports = function(options) {
+export default function plugin(options) {
   options = options || {};
   // var mithrilImport = 'import m from "mithril";';
   var ext = options.ext || 'msx';
-  var filter = pluginsutils.createFilter('**/*.' + ext);
+  var filter = createFilter('**/*.' + ext);
 
   options = assign({}, options);
 
@@ -24,4 +24,4 @@ module.exports = function(options) {
       return fixedCode;
     }
   };
-};
+}

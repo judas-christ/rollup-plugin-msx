@@ -1,6 +1,6 @@
 /*jshint multistr: true */
 var expect = require('chai').expect;
-var plugin = require('../index');
+var plugin = require('../dist/rollup-plugin-msx.cjs');
 var path = require('path');
 
 function fakePath(filename) {
@@ -128,7 +128,7 @@ export { something, somethingElse };\
       });
 
     });
-    
+
   });
 
 });
